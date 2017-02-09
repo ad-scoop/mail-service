@@ -18,7 +18,7 @@ public class StartEmailService {
 
     public static void main(String...args) throws Exception{
         RatpackServer.start(ratpackServerSpec -> ratpackServerSpec.serverConfig(serverConfigBuilder ->
-                serverConfigBuilder.baseDir(BaseDir.find()).yaml("datasource.yaml").require("db", Config.class).yaml("mail.yaml").require("mail", MailConfig.class).props("server.properties").env().sysProps().build())
+                serverConfigBuilder.baseDir(BaseDir.find()).yaml("datasource.yaml").require("/db", Config.class).yaml("mail.yaml").require("/mail", MailConfig.class).props("server.properties").env().sysProps().build())
                 .registry(Guice.registry( bindingsSpec -> bindingsSpec.module(BinderConfig.class).module(EmailModule.class).module(ServiceCommonConfigModule.class)))
                 .handlers(chain -> chain.prefix("activate", ac -> ac.post(":token/:email", ActivateUserHandler.class))));
     }
