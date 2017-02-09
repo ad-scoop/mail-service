@@ -1,6 +1,7 @@
 package com.adscoop.mailservice.handlers;
 
 import com.adscoop.mailservice.entites.UserNode;
+import com.adscoop.mailservice.services.MailService;
 import com.adscoop.mailservice.services.UserService;
 import com.google.inject.Inject;
 import ratpack.handling.Context;
@@ -13,11 +14,12 @@ import java.util.Optional;
  */
 public class ActivateUserHandler  implements Handler{
     UserService userService;
-
+MailService mailService;
 
     @Inject
-    public ActivateUserHandler(UserService userService) {
+    public ActivateUserHandler(UserService userService, MailService mailService ) {
         this.userService = userService;
+        this.mailService = mailService;
     }
 
     @Override

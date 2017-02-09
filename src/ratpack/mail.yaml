@@ -1,2 +1,3 @@
 email:
-  smpt: ""
+  smpt: smtp.ad-scoop.co,
+  activation: ad-scoop:8383/
