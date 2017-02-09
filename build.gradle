@@ -59,4 +59,4 @@ distZip {
     archiveName = baseName + ".zip"
 }
 
-mainClassName = "com.adscoop.StartEmailService"
+mainClassName = "com.adscoop.mailservice.StartEmailService"
