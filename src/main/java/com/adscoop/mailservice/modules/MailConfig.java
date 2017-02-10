@@ -6,7 +6,7 @@ package com.adscoop.mailservice.config;
 public class MailConfig {
     private String smtp;
     private String activation;
-
+    private String from;
 
     public String getSmtp() {
         return smtp;
@@ -22,5 +22,14 @@ public class MailConfig {
 
     public void setActivation(String activation) {
         this.activation = activation;
+    }
+
+
+    public String getFrom() {
+        return from;
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
     }
 }

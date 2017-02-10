@@ -1,3 +1,4 @@
 email:
   smpt: smtp.ad-scoop.co,
   activation: ad-scoop:8383/
+  from: no-replay@ad-scoop.com
