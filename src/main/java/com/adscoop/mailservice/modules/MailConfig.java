@@ -1,4 +1,4 @@
-package com.adscoop.mailservice.config;
+package com.adscoop.mailservice.modules;
 
 /**
  * Created by thokle on 08/02/2017.

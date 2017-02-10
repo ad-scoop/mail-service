@@ -15,9 +15,8 @@ public class BinderConfig extends AbstractModule {
         bind(SendEmailHandler.class).asEagerSingleton();
 
 
-        //Services
 
-        bind(MailService.class).to(MailServiceImpl.class).asEagerSingleton();
+
 
     }
 }

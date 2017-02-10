@@ -8,6 +8,6 @@ import javax.mail.internet.MimeMessage;
  */
 public interface MailService {
 
-    boolean sendMaill(String email, String subject, String text, MimeMessage.RecipientType type) throws MessagingException;
+    boolean sendMaill(String email, String subject, String text) throws MessagingException;
 
 }
