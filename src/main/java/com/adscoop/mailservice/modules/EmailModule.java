@@ -1,6 +1,5 @@
 package com.adscoop.mailservice.modules;
 
-import com.adscoop.mailservice.services.MailService;
 import com.adscoop.mailservice.services.MailServiceImpl;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;

@@ -14,19 +14,17 @@ import java.util.Properties;
 /**
  * Created by kleistit on 09/02/2017.
  */
-public class MailServiceImpl implements MailService {
+public class MailServiceImpl  {
 
 
-    private String from;
-    private  String smtp;
 
+    private MailConfig mailConfig;
     @Inject
     public MailServiceImpl(MailConfig mailConfig) {
-      setSmtp(mailConfig.getSmtp());
-      setFrom(mailConfig.getFrom());
+      this.mailConfig = mailConfig;
     }
 
-    @Override
+
     public boolean sendMaill(String email,String subject, String text) throws MessagingException {
         try {
             Transport.send(mimeMessage(text,subject, email));
@@ -47,7 +45,7 @@ public class MailServiceImpl implements MailService {
      mimeMessage.addRecipient(Message.RecipientType.TO,new InternetAddress(email));
      mimeMessage.setSubject(subject);
 
-        mimeMessage.setFrom(new InternetAddress(from));
+        mimeMessage.setFrom(new InternetAddress(mailConfig.getFrom()));
      mimeMessage.setText(message);
 
 
@@ -58,26 +56,11 @@ public class MailServiceImpl implements MailService {
     private Properties properties()
     {
         Properties properties = new Properties();
-        properties.setProperty("mail.smtp.host",getSmtp());
+        properties.setProperty("mail.smtp.host",mailConfig.getSmtp());
         return  properties;
 
     }
 
 
-    public String getFrom() {
-        return from;
-    }
 
-    public void setFrom(String from) {
-        this.from = from;
-    }
-
-
-    public String getSmtp() {
-        return smtp;
-    }
-
-    public void setSmtp(String smtp) {
-        this.smtp = smtp;
-    }
 }
