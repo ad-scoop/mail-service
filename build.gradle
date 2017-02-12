@@ -49,7 +49,7 @@ dependencies {
     compile group: 'com.xeiam', name: 'sundial', version: '2.0.1'
     compile group: 'commons-validator', name: 'commons-validator', version: '1.5.1'
     compile group: 'io.ratpack', name: 'ratpack-dropwizard-metrics', version: '1.4.4'
-    compile group: 'javax.mail', name: 'javax.mail-api', version: '1.5.6'
+    compile group: 'com.sun.mail', name: 'javax.mail', version: '1.5.6'
 
     runtime 'org.apache.logging.log4j:log4j-slf4j-impl:2.0.2'
     runtime 'org.apache.logging.log4j:log4j-api:2.0.2'

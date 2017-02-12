@@ -1,4 +1,4 @@
 email:
-    smtp: smtp.ad-scoop.com
+    smtp: localhost
     from: no-replay@ad-scoop.com
     activation: ad-scoop:8383/
